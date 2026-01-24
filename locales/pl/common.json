@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Strona główna",
+    "dashboard": "Panel",
+    "capitalAllocation": "Alokacja kapitału",
+    "admin": "Admin",
+    "login": "Zaloguj się",
+    "signup": "Zarejestruj się",
+    "logout": "Wyloguj się",
+    "language": "Język",
+    "riskDisclosure": "Ujawnienie ryzyka",
+    "terms": "Regulamin",
+    "privacy": "Polityka prywatności"
+  },
+  "hero": {
+    "title": "Instytucjonalna platforma inwestycyjna aktywów cyfrowych",
+    "subtitle": "Profesjonalne zarządzanie aktywami z przejrzystym raportowaniem i strategiami świadomymi ryzyka",
+    "cta": "Rozpocznij"
+  },
+  "investmentApproach": {
+    "title": "Podejście inwestycyjne",
+    "subtitle": "Nasza metodologia koncentruje się na zarządzaniu ryzykiem i ochronie kapitału",
+    "description": "Stosujemy zdyscyplinowane podejście do alokacji aktywów cyfrowych, kładąc nacisk na dywersyfikację, kontrole ryzyka i przejrzyste raportowanie."
+  },
+  "riskManagement": {
+    "title": "Zarządzanie ryzykiem",
+    "subtitle": "Kompleksowe kontrole i monitorowanie ryzyka",
+    "description": "Nasze ramy zarządzania ryzykiem obejmują limity pozycji, wymagania dotyczące dywersyfikacji i ciągłe monitorowanie ekspozycji portfela."
+  },
+  "transparency": {
+    "title": "Przejrzystość",
+    "subtitle": "Przejrzyste raportowanie i ujawnianie informacji",
+    "description": "Inwestorzy otrzymują regularne wyceny portfela, raporty alokacji i kompleksową historię aktywności."
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "country": "Kraj",
+    "residencyRegion": "Region zamieszkania",
+    "investorType": "Typ inwestora",
+    "forgotPassword": "Zapomniałeś hasła?",
+    "noAccount": "Nie masz konta?",
+    "haveAccount": "Masz już konto?",
+    "signIn": "Zaloguj się",
+    "createAccount": "Utwórz konto"
+  },
+  "dashboard": {
+    "title": "Panel inwestora",
+    "portfolioValue": "Wartość portfela",
+    "allocatedCapital": "Przydzielony kapitał",
+    "strategyExposure": "Ekspozycja na strategię",
+    "activityHistory": "Historia aktywności i alokacji",
+    "reportingPeriod": "Okres raportowania",
+    "conservative": "Konserwatywna strategia aktywów cyfrowych",
+    "balanced": "Zrównoważona strategia aktywów cyfrowych",
+    "growth": "Strategia aktywów cyfrowych zorientowana na wzrost"
+  },
+  "allocation": {
+    "title": "Wniosek o alokację kapitału",
+    "subtitle": "Poproś o przydział do kategorii strategii",
+    "selectStrategy": "Wybierz strategię",
+    "requestAmount": "Kwota wniosku (USD)",
+    "submitRequest": "Prześlij wniosek",
+    "pending": "Oczekujące",
+    "approved": "Zatwierdzone",
+    "rejected": "Odrzucone",
+    "status": "Status",
+    "requestDate": "Data wniosku",
+    "reviewDate": "Data przeglądu"
+  },
+  "admin": {
+    "title": "Panel administracyjny",
+    "allocationRequests": "Wnioski o alokację",
+    "userManagement": "Zarządzanie użytkownikami",
+    "portfolioValuations": "Wyceny portfela",
+    "reports": "Generuj raporty",
+    "approve": "Zatwierdź",
+    "reject": "Odrzuć",
+    "updateValuation": "Zaktualizuj wycenę",
+    "freeze": "Zamroź",
+    "unfreeze": "Odblokuj",
+    "generateReport": "Generuj raport"
+  },
+  "disclosure": {
+    "title": "Ujawnienie ryzyka",
+    "content": "Inwestycje w aktywa cyfrowe niosą ze sobą znaczne ryzyko. Wyniki z przeszłości nie gwarantują przyszłych rezultatów. Inwestorzy powinni dokładnie rozważyć swoją tolerancję na ryzyko i cele inwestycyjne."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Domov",
+    "dashboard": "Dashboard",
+    "capitalAllocation": "Alokácia kapitálu",
+    "admin": "Admin",
+    "login": "Prihlásiť sa",
+    "signup": "Registrovať sa",
+    "logout": "Odhlásiť sa",
+    "language": "Jazyk",
+    "riskDisclosure": "Zverejnenie rizika",
+    "terms": "Podmienky služby",
+    "privacy": "Zásady ochrany súkromia"
+  },
+  "hero": {
+    "title": "Inštitucionálna investičná platforma pre digitálne aktíva",
+    "subtitle": "Profesionálne správcovstvo aktív s transparentným vykazovaním a stratégiami zohľadňujúcimi riziká",
+    "cta": "Začať"
+  },
+  "investmentApproach": {
+    "title": "Investičný prístup",
+    "subtitle": "Naša metodika sa zameriava na riadenie rizík a ochranu kapitálu",
+    "description": "Používame disciplinovaný prístup k alokácii digitálnych aktív so zameraním na diverzifikáciu, kontroly rizík a transparentné vykazovanie."
+  },
+  "riskManagement": {
+    "title": "Riadenie rizík",
+    "subtitle": "Komplexné kontroly a monitorovanie rizík",
+    "description": "Náš rámec riadenia rizík zahŕňa limity pozícií, požiadavky na diverzifikáciu a nepretržité monitorovanie expozície portfólia."
+  },
+  "transparency": {
+    "title": "Transparentnosť",
+    "subtitle": "Jasné vykazovanie a zverejňovanie",
+    "description": "Investori dostávajú pravidelné ocenenia portfólia, správy o alokácii a komplexnú históriu aktivít."
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Heslo",
+    "confirmPassword": "Potvrdiť heslo",
+    "country": "Krajina",
+    "residencyRegion": "Región pobytu",
+    "investorType": "Typ investora",
+    "forgotPassword": "Zabudli ste heslo?",
+    "noAccount": "Nemáte účet?",
+    "haveAccount": "Už máte účet?",
+    "signIn": "Prihlásiť sa",
+    "createAccount": "Vytvoriť účet"
+  },
+  "dashboard": {
+    "title": "Investorský dashboard",
+    "portfolioValue": "Hodnota portfólia",
+    "allocatedCapital": "Alokovaný kapitál",
+    "strategyExposure": "Expozícia stratégie",
+    "activityHistory": "História aktivít a alokácie",
+    "reportingPeriod": "Vykazované obdobie",
+    "conservative": "Konzervatívna stratégia digitálnych aktív",
+    "balanced": "Vyvážená stratégia digitálnych aktív",
+    "growth": "Rastovo orientovaná stratégia digitálnych aktív"
+  },
+  "allocation": {
+    "title": "Žiadosť o alokáciu kapitálu",
+    "subtitle": "Požiadať o alokáciu do kategórií stratégií",
+    "selectStrategy": "Vybrať stratégiu",
+    "requestAmount": "Požadovaná suma (USD)",
+    "submitRequest": "Odoslať žiadosť",
+    "pending": "Čakajúce",
+    "approved": "Schválené",
+    "rejected": "Odmietnuté",
+    "status": "Stav",
+    "requestDate": "Dátum žiadosti",
+    "reviewDate": "Dátum prehliadky"
+  },
+  "admin": {
+    "title": "Admin panel",
+    "allocationRequests": "Žiadosti o alokáciu",
+    "userManagement": "Správa používateľov",
+    "portfolioValuations": "Ocenenia portfólia",
+    "reports": "Generovať správy",
+    "approve": "Schváliť",
+    "reject": "Odmietnuť",
+    "updateValuation": "Aktualizovať ocenenie",
+    "freeze": "Zmraziť",
+    "unfreeze": "Rozmraziť",
+    "generateReport": "Generovať správu"
+  },
+  "disclosure": {
+    "title": "Zverejnenie rizika",
+    "content": "Investície do digitálnych aktív nesú významné riziká. Minulé výsledky nezaručujú budúce výsledky. Investori by mali dôkladne zvážiť svoju toleranciu rizika a investičné ciele."
+  }
+}

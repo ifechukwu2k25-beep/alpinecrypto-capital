@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Pagrindinis",
+    "dashboard": "Skydelis",
+    "capitalAllocation": "Kapitalo paskirstymas",
+    "admin": "Administratorius",
+    "login": "Prisijungti",
+    "signup": "Registruotis",
+    "logout": "Atsijungti",
+    "language": "Kalba",
+    "riskDisclosure": "Rizikos atskleidimas",
+    "terms": "Paslaugų sąlygos",
+    "privacy": "Privatumo politika"
+  },
+  "hero": {
+    "title": "Institucinė skaitmeninių turtų investavimo platforma",
+    "subtitle": "Profesionalus turto valdymas su skaidriu ataskaitų teikimu ir rizikos suvokimo strategijomis",
+    "cta": "Pradėti"
+  },
+  "investmentApproach": {
+    "title": "Investavimo požiūris",
+    "subtitle": "Mūsų metodika orientuota į rizikos valdymą ir kapitalo išsaugojimą",
+    "description": "Taikome disciplinuotą požiūrį į skaitmeninių turtų paskirstymą, akcentuodami įvairovę, rizikos kontrolę ir skaidrų ataskaitų teikimą."
+  },
+  "riskManagement": {
+    "title": "Rizikos valdymas",
+    "subtitle": "Išsamus rizikos kontrolės ir stebėjimo mechanizmas",
+    "description": "Mūsų rizikos valdymo struktūra apima pozicijų limitus, įvairovės reikalavimus ir nuolatinį portfelio rizikos stebėjimą."
+  },
+  "transparency": {
+    "title": "Skaidrumas",
+    "subtitle": "Aiškus ataskaitų teikimas ir informacijos atskleidimas",
+    "description": "Investuotojai gauna reguliarias portfelio vertinimo ataskaitas, paskirstymo ataskaitas ir išsamų veiklos istorijos įrašą."
+  },
+  "auth": {
+    "email": "El. paštas",
+    "password": "Slaptažodis",
+    "confirmPassword": "Patvirtinti slaptažodį",
+    "country": "Šalis",
+    "residencyRegion": "Gyvenamosios vietos regionas",
+    "investorType": "Investuotojo tipas",
+    "forgotPassword": "Pamiršote slaptažodį?",
+    "noAccount": "Neturite paskyros?",
+    "haveAccount": "Jau turite paskyrą?",
+    "signIn": "Prisijungti",
+    "createAccount": "Sukurti paskyrą"
+  },
+  "dashboard": {
+    "title": "Investuotojo skydelis",
+    "portfolioValue": "Portfelio vertė",
+    "allocatedCapital": "Paskirstytas kapitalas",
+    "strategyExposure": "Strategijos rizika",
+    "activityHistory": "Veiklos ir paskirstymo istorija",
+    "reportingPeriod": "Ataskaitų laikotarpis",
+    "conservative": "Konservatyvi skaitmeninių turtų strategija",
+    "balanced": "Subalansuota skaitmeninių turtų strategija",
+    "growth": "Augimo orientuota skaitmeninių turtų strategija"
+  },
+  "allocation": {
+    "title": "Kapitalo paskirstymo prašymas",
+    "subtitle": "Prašyti paskirstymo strategijų kategorijoms",
+    "selectStrategy": "Pasirinkti strategiją",
+    "requestAmount": "Prašoma suma (USD)",
+    "submitRequest": "Pateikti prašymą",
+    "pending": "Laukiama",
+    "approved": "Patvirtinta",
+    "rejected": "Atmesta",
+    "status": "Būsena",
+    "requestDate": "Prašymo data",
+    "reviewDate": "Peržiūros data"
+  },
+  "admin": {
+    "title": "Administratoriaus skydelis",
+    "allocationRequests": "Paskirstymo prašymai",
+    "userManagement": "Naudotojų valdymas",
+    "portfolioValuations": "Portfelio vertinimas",
+    "reports": "Generuoti ataskaitas",
+    "approve": "Patvirtinti",
+    "reject": "Atmesti",
+    "updateValuation": "Atnaujinti vertinimą",
+    "freeze": "Užšaldyti",
+    "unfreeze": "Atšaldyti",
+    "generateReport": "Generuoti ataskaitą"
+  },
+  "disclosure": {
+    "title": "Rizikos atskleidimas",
+    "content": "Skaitmeninių turtų investicijos kelia didelę riziką. Ankstesnės veiklos rezultatai negarantuoja būsimų rezultatų. Investuotojai turėtų atsargiai įvertinti savo rizikos toleranciją ir investavimo tikslus."
+  }
+}

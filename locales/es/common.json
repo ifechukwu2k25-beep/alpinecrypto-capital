@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "capitalAllocation": "Asignación de Capital",
+    "admin": "Admin",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "language": "Idioma",
+    "riskDisclosure": "Divulgación de Riesgos",
+    "terms": "Términos de Servicio",
+    "privacy": "Política de Privacidad"
+  },
+  "hero": {
+    "title": "Plataforma Institucional de Inversión en Activos Digitales",
+    "subtitle": "Gestión profesional de activos con informes transparentes y estrategias conscientes del riesgo",
+    "cta": "Comenzar"
+  },
+  "investmentApproach": {
+    "title": "Enfoque de Inversión",
+    "subtitle": "Nuestra metodología se centra en la gestión de riesgos y la preservación del capital",
+    "description": "Empleamos un enfoque disciplinado para la asignación de activos digitales, enfatizando la diversificación, los controles de riesgo y la información transparente."
+  },
+  "riskManagement": {
+    "title": "Gestión de Riesgos",
+    "subtitle": "Controles y monitoreo integral de riesgos",
+    "description": "Nuestro marco de gestión de riesgos incluye límites de posición, requisitos de diversificación y monitoreo continuo de la exposición del portafolio."
+  },
+  "transparency": {
+    "title": "Transparencia",
+    "subtitle": "Informes y divulgación claros",
+    "description": "Los inversores reciben valoraciones regulares del portafolio, informes de asignación e historial completo de actividades."
+  },
+  "auth": {
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "country": "País",
+    "residencyRegion": "Región de Residencia",
+    "investorType": "Tipo de Inversor",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "signIn": "Iniciar Sesión",
+    "createAccount": "Crear Cuenta"
+  },
+  "dashboard": {
+    "title": "Panel del Inversor",
+    "portfolioValue": "Valor del Portafolio",
+    "allocatedCapital": "Capital Asignado",
+    "strategyExposure": "Exposición a Estrategias",
+    "activityHistory": "Historial de Actividades y Asignaciones",
+    "reportingPeriod": "Período de Informe",
+    "conservative": "Estrategia Conservadora de Activos Digitales",
+    "balanced": "Estrategia Equilibrada de Activos Digitales",
+    "growth": "Estrategia Orientada al Crecimiento de Activos Digitales"
+  },
+  "allocation": {
+    "title": "Solicitud de Asignación de Capital",
+    "subtitle": "Solicitar asignación a categorías de estrategias",
+    "selectStrategy": "Seleccionar Estrategia",
+    "requestAmount": "Cantidad Solicitada (USD)",
+    "submitRequest": "Enviar Solicitud",
+    "pending": "Pendiente",
+    "approved": "Aprobada",
+    "rejected": "Rechazada",
+    "status": "Estado",
+    "requestDate": "Fecha de Solicitud",
+    "reviewDate": "Fecha de Revisión"
+  },
+  "admin": {
+    "title": "Panel de Administración",
+    "allocationRequests": "Solicitudes de Asignación",
+    "userManagement": "Gestión de Usuarios",
+    "portfolioValuations": "Valoraciones de Portafolio",
+    "reports": "Generar Informes",
+    "approve": "Aprobar",
+    "reject": "Rechazar",
+    "updateValuation": "Actualizar Valoración",
+    "freeze": "Congelar",
+    "unfreeze": "Descongelar",
+    "generateReport": "Generar Informe"
+  },
+  "disclosure": {
+    "title": "Divulgación de Riesgos",
+    "content": "Las inversiones en activos digitales conllevan riesgos significativos. El rendimiento pasado no garantiza resultados futuros. Los inversores deben considerar cuidadosamente su tolerancia al riesgo y sus objetivos de inversión."
+  }
+}

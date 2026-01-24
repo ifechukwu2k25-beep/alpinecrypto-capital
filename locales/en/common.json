@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "capitalAllocation": "Capital Allocation",
+    "admin": "Admin",
+    "login": "Login",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "language": "Language",
+    "riskDisclosure": "Risk Disclosure",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  },
+  "hero": {
+    "title": "Institutional Digital Asset Investment Platform",
+    "subtitle": "Professional asset management with transparent reporting and risk-aware strategies",
+    "cta": "Get Started"
+  },
+  "investmentApproach": {
+    "title": "Investment Approach",
+    "subtitle": "Our methodology focuses on risk management and capital preservation",
+    "description": "We employ a disciplined approach to digital asset allocation, emphasizing diversification, risk controls, and transparent reporting."
+  },
+  "riskManagement": {
+    "title": "Risk Management",
+    "subtitle": "Comprehensive risk controls and monitoring",
+    "description": "Our risk management framework includes position limits, diversification requirements, and continuous monitoring of portfolio exposure."
+  },
+  "transparency": {
+    "title": "Transparency",
+    "subtitle": "Clear reporting and disclosure",
+    "description": "Investors receive regular portfolio valuations, allocation reports, and comprehensive activity history."
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "country": "Country",
+    "residencyRegion": "Residency Region",
+    "investorType": "Investor Type",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign In",
+    "createAccount": "Create Account"
+  },
+  "dashboard": {
+    "title": "Investor Dashboard",
+    "portfolioValue": "Portfolio Value",
+    "allocatedCapital": "Allocated Capital",
+    "strategyExposure": "Strategy Exposure",
+    "activityHistory": "Activity & Allocation History",
+    "reportingPeriod": "Reporting Period",
+    "conservative": "Conservative Digital Asset Strategy",
+    "balanced": "Balanced Digital Asset Strategy",
+    "growth": "Growth-Oriented Digital Asset Strategy"
+  },
+  "allocation": {
+    "title": "Capital Allocation Request",
+    "subtitle": "Request allocation to strategy categories",
+    "selectStrategy": "Select Strategy",
+    "requestAmount": "Request Amount (USD)",
+    "submitRequest": "Submit Request",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "status": "Status",
+    "requestDate": "Request Date",
+    "reviewDate": "Review Date"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "allocationRequests": "Allocation Requests",
+    "userManagement": "User Management",
+    "portfolioValuations": "Portfolio Valuations",
+    "reports": "Generate Reports",
+    "approve": "Approve",
+    "reject": "Reject",
+    "updateValuation": "Update Valuation",
+    "freeze": "Freeze",
+    "unfreeze": "Unfreeze",
+    "generateReport": "Generate Report"
+  },
+  "disclosure": {
+    "title": "Risk Disclosure",
+    "content": "Digital asset investments carry significant risk. Past performance does not guarantee future results. Investors should carefully consider their risk tolerance and investment objectives."
+  }
+}

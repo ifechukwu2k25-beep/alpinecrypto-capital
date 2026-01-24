@@ -1,0 +1,89 @@
+{
+  "common": {
+    "home": "Startseite",
+    "dashboard": "Dashboard",
+    "capitalAllocation": "Kapitalzuweisung",
+    "admin": "Admin",
+    "login": "Anmelden",
+    "signup": "Registrieren",
+    "logout": "Abmelden",
+    "language": "Sprache",
+    "riskDisclosure": "Risikohinweis",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutzerklärung"
+  },
+  "hero": {
+    "title": "Institutionelle Digital-Asset-Investment-Plattform",
+    "subtitle": "Professionelles Vermögensmanagement mit transparenter Berichterstattung und risikobewussten Strategien",
+    "cta": "Loslegen"
+  },
+  "investmentApproach": {
+    "title": "Anlageansatz",
+    "subtitle": "Unsere Methodik konzentriert sich auf Risikomanagement und Kapitalerhaltung",
+    "description": "Wir verwenden einen disziplinierten Ansatz für die Digital-Asset-Zuordnung mit Schwerpunkt auf Diversifizierung, Risikokontrollen und transparenter Berichterstattung."
+  },
+  "riskManagement": {
+    "title": "Risikomanagement",
+    "subtitle": "Umfassende Risikokontrollen und Überwachung",
+    "description": "Unser Risikomanagement-Framework umfasst Positionslimits, Diversifizierungsanforderungen und kontinuierliche Überwachung der Portfolioexposition."
+  },
+  "transparency": {
+    "title": "Transparenz",
+    "subtitle": "Klare Berichterstattung und Offenlegung",
+    "description": "Investoren erhalten regelmäßige Portfoliobewertungen, Zuweisungsberichte und umfassende Aktivitätsverläufe."
+  },
+  "auth": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "country": "Land",
+    "residencyRegion": "Wohnsitzregion",
+    "investorType": "Investorentyp",
+    "forgotPassword": "Passwort vergessen?",
+    "noAccount": "Noch kein Konto?",
+    "haveAccount": "Bereits ein Konto?",
+    "signIn": "Anmelden",
+    "createAccount": "Konto erstellen"
+  },
+  "dashboard": {
+    "title": "Investor-Dashboard",
+    "portfolioValue": "Portfoliowert",
+    "allocatedCapital": "Zugewiesenes Kapital",
+    "strategyExposure": "Strategieexposition",
+    "activityHistory": "Aktivitäts- und Zuweisungsverlauf",
+    "reportingPeriod": "Berichtszeitraum",
+    "conservative": "Konservative Digital-Asset-Strategie",
+    "balanced": "Ausgewogene Digital-Asset-Strategie",
+    "growth": "Wachstumsorientierte Digital-Asset-Strategie"
+  },
+  "allocation": {
+    "title": "Kapitalzuweisungsanfrage",
+    "subtitle": "Zuweisung zu Strategiekategorien anfordern",
+    "selectStrategy": "Strategie auswählen",
+    "requestAmount": "Angeforderter Betrag (USD)",
+    "submitRequest": "Anfrage senden",
+    "pending": "Ausstehend",
+    "approved": "Genehmigt",
+    "rejected": "Abgelehnt",
+    "status": "Status",
+    "requestDate": "Anfragedatum",
+    "reviewDate": "Überprüfungsdatum"
+  },
+  "admin": {
+    "title": "Admin-Panel",
+    "allocationRequests": "Zuweisungsanfragen",
+    "userManagement": "Benutzerverwaltung",
+    "portfolioValuations": "Portfoliobewertungen",
+    "reports": "Berichte generieren",
+    "approve": "Genehmigen",
+    "reject": "Ablehnen",
+    "updateValuation": "Bewertung aktualisieren",
+    "freeze": "Sperren",
+    "unfreeze": "Entsperren",
+    "generateReport": "Bericht generieren"
+  },
+  "disclosure": {
+    "title": "Risikohinweis",
+    "content": "Digital-Asset-Investitionen bergen erhebliche Risiken. Die vergangene Wertentwicklung ist kein Indikator für zukünftige Ergebnisse. Investoren sollten ihre Risikobereitschaft und Anlageziele sorgfältig prüfen."
+  }
+}

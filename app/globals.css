@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F9F9F9;
+  --foreground: #2A2A2A;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), Georgia, serif;
+    color: #0C1F3A;
+    font-weight: 600;
+  }
+
+  h1 {
+    @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
+  h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6 {
+    @apply text-base font-semibold;
+  }
+
+  p {
+    @apply text-base leading-relaxed text-charcoal;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-red text-white font-semibold rounded-md transition-all duration-300 hover:bg-red-600 hover:shadow-lg active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border-2 border-navy text-navy font-semibold rounded-md transition-all duration-300 hover:bg-navy hover:text-white active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 bg-transparent text-navy font-semibold rounded-md transition-all duration-300 hover:text-red hover:bg-offwhite active:scale-[0.98];
+  }
+
+  .nav-link {
+    @apply text-charcoal font-medium transition-all duration-300 relative;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-red transition-all duration-300;
+    content: "";
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link:hover {
+    @apply text-navy;
+  }
+
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm p-6 transition-all duration-300 hover:shadow-md;
+  }
+
+  .section-padding {
+    @apply py-20 px-4;
+  }
+
+  .container-custom {
+    @apply container mx-auto max-w-7xl;
+  }
+
+  .text-h1 {
+    @apply text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  .text-h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  .text-display-1 {
+    @apply text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .text-display-2 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="ltr"] {
+  direction: ltr;
+}
