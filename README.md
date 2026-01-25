@@ -174,3 +174,5 @@ Before deploying to production:
 ## Support
 
 For support, please contact [your support email].
+# alpinecrypto-capital
+AlpineCrypto Capital – institutional crypto investment platform built with Next.js and Supabase
