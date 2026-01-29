@@ -28,11 +28,15 @@ export default function InvestPage() {
   }, []);
 
   const loadPlans = async () => {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("investment_plans")
       .select("*")
       .eq("is_active", true)
-      .order("min_deposit", { ascending: true });
+      .order("min_investment", { ascending: true });
+
+    if (error) {
+      console.error("Error loading plans:", error);
+    }
 
     if (data) {
       setPlans(data);
@@ -51,7 +55,7 @@ export default function InvestPage() {
     }
 
     setSelectedPlan(plan);
-    setInvestAmount(plan.min_deposit?.toString() || "");
+    setInvestAmount(plan.min_investment?.toString() || "");
   };
 
   const confirmInvestment = async () => {
@@ -69,13 +73,12 @@ export default function InvestPage() {
     setInvesting(true);
 
     const amount = parseFloat(investAmount);
-    const expectedReturn = amount * (1 + (selectedPlan.expected_return_rate || 0) / 100);
+    const expectedReturn = amount * (1 + (selectedPlan.roi_percentage || 0) / 100);
 
     // Create user plan
     const { error: planError } = await supabase.from("user_plans").insert({
       user_id: user.id,
-      investment_plan_id: selectedPlan.id,
-      plan_name: selectedPlan.name,
+      plan_id: selectedPlan.id,
       amount: amount,
       status: "active",
       expected_return: expectedReturn,
@@ -112,59 +115,105 @@ export default function InvestPage() {
       <div className="flex flex-col min-h-screen bg-offwhite">
         <Header />
         <main className="flex-grow flex items-center justify-center">
-          <p className="text-charcoal">Loading investment plans...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-navy mx-auto"></div>
         </main>
         <Footer />
       </div>
     );
   }
 
+  // Tier colors for visual hierarchy
+  const getTierColor = (index: number) => {
+    const colors = [
+      "border-green-500",    // Starter - Green
+      "border-amber-600",    // Bronze
+      "border-gray-400",     // Silver
+      "border-yellow-500",   // Gold
+      "border-purple-500",   // Platinum
+      "border-blue-600"      // Diamond
+    ];
+    return colors[index] || "border-gray-300";
+  };
+
+  const getTierBadge = (name: string) => {
+    if (name === "Diamond") return "💎 ELITE";
+    if (name === "Platinum") return "👑 VIP";
+    if (name === "Gold") return "⭐ PREMIUM";
+    if (name === "Silver") return "🔥 POPULAR";
+    if (name === "Bronze") return "📈 GROWTH";
+    return "🚀 START";
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-offwhite">
       <Header />
       <main className="flex-grow py-12 px-4">
         <div className="container-custom max-w-7xl mx-auto">
-          <h1 className="text-h1 text-navy mb-4 font-serif">Investment Plans</h1>
-          <p className="text-charcoal mb-8">Choose an investment plan that fits your financial goals</p>
+          <div className="text-center mb-12">
+            <h1 className="text-h1 text-navy mb-4 font-serif">Investment Plans</h1>
+            <p className="text-charcoal text-lg">
+              Choose an investment plan that fits your financial goals. All plans include professional portfolio management.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {plans.map((plan) => (
-              <Card key={plan.id} className="flex flex-col">
-                <h2 className="text-h3 text-navy mb-2 font-serif">{plan.name}</h2>
-                
-                <div className="space-y-2 mb-4 flex-grow">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-charcoal">ROI Range:</span>
-                    <span className="font-semibold text-navy">
-                      {plan.roi_min}% - {plan.roi_max}%
+            {plans.map((plan, index) => (
+              <Card 
+                key={plan.id} 
+                className={`flex flex-col border-2 ${getTierColor(index)} hover:shadow-xl transition-all duration-300`}
+              >
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h2 className="text-h3 text-navy font-serif">{plan.name}</h2>
+                    <span className="text-xs font-bold bg-navy text-white px-2 py-1 rounded">
+                      {getTierBadge(plan.name)}
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-charcoal">Min Deposit:</span>
-                    <span className="font-semibold text-navy">
-                      {formatCurrency(plan.min_deposit || 0, i18n.language)}
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-charcoal">Expected Return:</span>
-                    <span className="font-semibold text-green-600">{plan.expected_return_rate}%</span>
-                  </div>
-                  {plan.duration_months && (
-                    <div className="flex justify-between">
-                      <span className="text-sm text-charcoal">Duration:</span>
-                      <span className="font-semibold text-navy">{plan.duration_months} months</span>
-                    </div>
+                  {plan.description && (
+                    <p className="text-sm text-charcoal leading-relaxed">
+                      {plan.description}
+                    </p>
                   )}
-                  {plan.lock_period_hours && (
-                    <div className="flex justify-between">
-                      <span className="text-sm text-charcoal">Lock Period:</span>
-                      <span className="font-semibold text-navy">{plan.lock_period_hours}h</span>
+                </div>
+                
+                <div className="space-y-3 mb-6 flex-grow">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                    <span className="text-sm text-charcoal">Investment Range:</span>
+                    <span className="font-semibold text-navy">
+                      {formatCurrency(plan.min_investment || 0, i18n.language)} - {formatCurrency(plan.max_investment || 0, i18n.language)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                    <span className="text-sm text-charcoal">Total Returns:</span>
+                    <span className="font-bold text-green-600 text-lg">
+                      {plan.roi_percentage}%
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-200">
+                    <span className="text-sm text-charcoal">Duration:</span>
+                    <span className="font-semibold text-navy">
+                      {Math.round((plan.duration_days || 0) / 30)} months ({plan.duration_days} days)
+                    </span>
+                  </div>
+                  
+                  {plan.features && plan.features.length > 0 && (
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <p className="text-xs font-semibold text-charcoal mb-2">FEATURES:</p>
+                      <ul className="space-y-1">
+                        {plan.features.slice(0, 4).map((feature, idx) => (
+                          <li key={idx} className="text-xs text-charcoal flex items-start">
+                            <span className="text-green-600 mr-2">✓</span>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   )}
                 </div>
+                
                 <button
                   onClick={() => handleInvest(plan)}
-                  className="w-full bg-navy text-white py-3 rounded-lg hover:bg-opacity-90 transition"
+                  className="w-full bg-navy text-white py-3 px-4 rounded-lg hover:bg-opacity-90 transition font-semibold"
                 >
                   Invest Now
                 </button>
@@ -174,7 +223,8 @@ export default function InvestPage() {
 
           {plans.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-charcoal">No investment plans available at the moment.</p>
+              <p className="text-charcoal text-lg">No investment plans available at the moment.</p>
+              <p className="text-sm text-charcoal mt-2">Please check back later or contact support.</p>
             </div>
           )}
         </div>
@@ -184,45 +234,66 @@ export default function InvestPage() {
       {/* Investment Modal */}
       {selectedPlan && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg p-6 max-w-md w-full">
-            <h2 className="text-h3 text-navy mb-4 font-serif">Invest in {selectedPlan.name}</h2>
+          <div className="bg-white rounded-lg p-6 max-w-md w-full shadow-2xl">
+            <h2 className="text-h3 text-navy mb-4 font-serif">
+              Invest in {selectedPlan.name}
+            </h2>
+            
             <div className="mb-4">
-              <label className="block text-sm font-medium text-charcoal mb-2">Investment Amount</label>
+              <label className="block text-sm font-medium text-charcoal mb-2">
+                Investment Amount (USD)
+              </label>
               <input
                 type="number"
-                min={selectedPlan.min_deposit || 0}
-                max={selectedPlan.roi_max ? selectedPlan.min_deposit! * selectedPlan.roi_max : undefined}
+                min={selectedPlan.min_investment || 0}
+                max={selectedPlan.max_investment || undefined}
                 value={investAmount}
                 onChange={(e) => setInvestAmount(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy"
-                placeholder={`Min: ${formatCurrency(selectedPlan.min_deposit || 0, i18n.language)}`}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy text-lg"
+                placeholder={`Min: ${formatCurrency(selectedPlan.min_investment || 0, i18n.language)}`}
               />
+              <p className="text-xs text-charcoal mt-1">
+                Range: {formatCurrency(selectedPlan.min_investment || 0, i18n.language)} - {formatCurrency(selectedPlan.max_investment || 0, i18n.language)}
+              </p>
             </div>
-            {investAmount && (
-              <div className="bg-gray-50 p-4 rounded-lg mb-4">
-                <p className="text-sm text-charcoal mb-2">Expected Return:</p>
-                <p className="text-2xl font-bold text-green-600">
+            
+            {investAmount && parseFloat(investAmount) >= (selectedPlan.min_investment || 0) && (
+              <div className="bg-green-50 p-4 rounded-lg mb-4 border border-green-200">
+                <p className="text-sm text-charcoal mb-1">Expected Return:</p>
+                <p className="text-3xl font-bold text-green-600">
                   {formatCurrency(
-                    parseFloat(investAmount) * (1 + (selectedPlan.expected_return_rate || 0) / 100),
+                    parseFloat(investAmount) * (1 + (selectedPlan.roi_percentage || 0) / 100),
                     i18n.language
                   )}
                 </p>
+                <p className="text-xs text-green-700 mt-2">
+                  Profit: {formatCurrency(
+                    parseFloat(investAmount) * ((selectedPlan.roi_percentage || 0) / 100),
+                    i18n.language
+                  )} ({selectedPlan.roi_percentage}%)
+                </p>
               </div>
             )}
+            
             <div className="flex gap-3">
               <button
                 onClick={() => setSelectedPlan(null)}
                 disabled={investing}
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition font-semibold"
               >
                 Cancel
               </button>
               <button
                 onClick={confirmInvestment}
-                disabled={investing || !investAmount}
-                className="flex-1 bg-navy text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition disabled:opacity-50"
+                disabled={
+                  investing || 
+                  !investAmount || 
+                  parseFloat(investAmount) < (selectedPlan.min_investment || 0) ||
+                  parseFloat(investAmount) > (selectedPlan.max_investment || Infinity)
+                }
+                className="flex-1 bg-navy text-white px-4 py-3 rounded-lg hover:bg-opacity-90 transition disabled:opacity-50 font-semibold"
               >
-                {investing ? "Processing..." : "Confirm"}
+                {investing ? "Processing..." : "Confirm Investment"}
               </button>
             </div>
           </div>
